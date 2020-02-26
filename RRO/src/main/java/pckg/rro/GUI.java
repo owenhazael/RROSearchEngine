@@ -7,7 +7,7 @@ package pckg.rro;
 
 /**
  *
- * @author User
+ * @author Owen Bueso
  */
 public class GUI extends javax.swing.JFrame {
 
