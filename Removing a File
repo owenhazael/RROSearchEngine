@@ -1,0 +1,6 @@
+private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        DefaultListModel mod = (DefaultListModel) jlist1.getModel();
+        int selectedIndex = jlist1.getSelectedIndex();
+        if (selectedIndex != -1) {
+        mod.remove(selectedIndex);
+    }                               
