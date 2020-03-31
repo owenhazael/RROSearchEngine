@@ -1,0 +1,35 @@
+   private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+
+        JFileChooser fc = new JFileChooser();
+        int result = fc.showOpenDialog(this);
+        if(result == JFileChooser.APPROVE_OPTION)
+        {
+            return;
+            
+        }
+         String fileName = fc.getSelectedFile().getName();
+
+    
+    DefaultListModel<String> mod;
+    try {
+        
+        mod = (DefaultListModel<String>) jList1.getModel();
+    }
+    catch (Exception ex) {
+
+        jList1.setModel(new DefaultListModel<>());
+   
+        mod = (DefaultListModel<String>) jList1.getModel();
+    }
+ 
+    boolean factive = false;
+    for (int i = 0; i < mod.getSize(); i++) {
+        if (mod.getElementAt(i).equals(fileName)) {
+            factive = true;
+            break;
+        }
+    }
+
+    if (!factive) {
+        mod.addElement(fileName);
+    }
