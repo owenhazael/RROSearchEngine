@@ -1,0 +1,4 @@
+ private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        JOptionPane.showMessageDialog(this, "Search Engine 1.1."
+                + "\nWritten by: Owen Bueso, Reynaldo Marin and Roland Colon,");
+    }      
