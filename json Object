@@ -1,0 +1,13 @@
+private static JSONObject createJSONObject(String jsonString) 
+    {
+    JSONObject  jsonObject=new JSONObject();
+    JSONParser jsonParser=new  JSONParser();
+    if ((jsonString != null) && !(jsonString.isEmpty())) 
+    {
+        try {
+            jsonObject=(JSONObject) jsonParser.parse(jsonString);
+        } catch (org.json.simple.parser.ParseException e) {
+            e.printStackTrace();
+        }
+    }
+    return jsonObject;
